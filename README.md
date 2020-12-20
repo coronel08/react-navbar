@@ -1,3 +1,7 @@
+# react-navbar
+Following this react [navbar tutorial](https://codeburst.io/how-to-create-a-navigation-bar-and-sidebar-using-react-348243ccd93). Using React and Bootstrap to build a nav-bar. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
