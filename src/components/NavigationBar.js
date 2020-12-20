@@ -21,6 +21,10 @@ const Styles = styled.div `
     .ml-auto{
         background-color: #3B1D27;
     }
+    .nav-link{
+        margin-left:80px;
+        width: 50px;
+    }
 `;
 
 export const NavigationBar = () => (
