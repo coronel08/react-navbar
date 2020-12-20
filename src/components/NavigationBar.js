@@ -3,7 +3,7 @@ import { Nav, Navbar, Form, FormControl} from 'react-bootstrap';
 import styled from 'styled-components';
 
 const Styles = styled.div `
-    .navbar { background-color: #222; }
+    .navbar { background-color: #3B1D27; }
     a, .navbar-nav, .navbar-light .nav-link {
         color: #9FFFCB;
         &:hover { color: white; }
@@ -17,6 +17,9 @@ const Styles = styled.div `
         position: absolute !important;
         left: 25%;
         right: 25%;
+    }
+    .ml-auto{
+        background-color: #3B1D27;
     }
 `;
 
