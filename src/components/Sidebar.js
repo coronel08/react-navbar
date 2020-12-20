@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from "styled-components";
+import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
 
 /* The bar that goes dowm the screen*/
@@ -18,10 +18,10 @@ class SideNav extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activepath: '/',
+            activePath: props.location.pathname,
             items: [
                 {
-                    path: '/', /* Path used as id to check which NavItem is active*/
+                    path: '/', /* path used as id to check which NavItem is active*/
                     name: 'Home',
                     css: 'fa fa-fw fa-home',
                     key: 1 /* Key required or else error*/
@@ -43,12 +43,12 @@ class SideNav extends React.Component {
     }
 
     onItemClick = (path) => {
-        this.setState({ activepath:path }) /* Sets activepath, causes rerender to change CSS*/
+        this.setState({ activePath:path }); /* Sets activepath, causes rerender to change CSS*/
     }
 
     render() {
-        const {items, activePath} = this.state;
-        return (
+        const { items, activePath } = this.state;
+        return(
             <StyledSideNav>
                 {
                     items.map((item) => {
@@ -78,7 +78,7 @@ const StyledNavItem = styled.div `
     margin-bottom: 0; 
     a {
         font-size: 2.7em;
-        color: ${(props) => props.active ? "white": "#9FFFCB"};
+        color: ${(props) => props.active ? "white" : "#9FFFCB"};
         :hover {
             opacity: 0.7;
             text-decoration: none;
@@ -93,8 +93,8 @@ class NavItem extends React.Component {
     }
 
     render() {
-        const {active} = this.props;
-        return (
+        const { active } = this.props;
+        return(
             <StyledNavItem active={active}>
                 <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
                     <NavIcon></NavIcon>
