@@ -29,7 +29,7 @@ class SideNav extends React.Component {
                 {
                     path: '/about',
                     name: 'About',
-                    css: 'fa fa-fw fa-clock',
+                    css: 'fa fa-fw fa-clock fa-spin',
                     key: 2
                 },
                 {
