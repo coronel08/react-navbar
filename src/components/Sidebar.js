@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import { SidebarData } from './SidebarData'
 
 /* The bar that goes dowm the screen*/
 const StyledSideNav = styled.div `
@@ -19,26 +20,7 @@ class SideNav extends React.Component {
         super(props);
         this.state = {
             activePath: props.location.pathname,
-            items: [
-                {
-                    path: '/', /* path used as id to check which NavItem is active*/
-                    name: 'Home',
-                    css: 'fa fa-fw fa-home',
-                    key: 1 /* Key required or else error*/
-                },
-                {
-                    path: '/about',
-                    name: 'About',
-                    css: 'fa fa-fw fa-clock fa-spin',
-                    key: 2
-                },
-                {
-                    path: '/NoMatch',
-                    name: 'NoMatch',
-                    css: 'fas fa-hashtag',
-                    key: 3
-                },
-            ]
+            items: SidebarData
         }
     }
 
